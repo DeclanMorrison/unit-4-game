@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title></title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS IMPORTS -->
+
+        <!-- Reset -->
+        <link rel="stylesheet" href="./assets/css/reset.css" >
+        <!-- Bootstrap 4-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <!-- FontAwesome 5 -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="./assets/css/style.css" >
+
+
+        <!-- JAVASCRIPT & JQUERY IMPORTS-->
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <!-- Javascript -->
+        <script src="./assets/javascript/game.js" ></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <img class="center" src="./assets/images/logo.png">
+            </div>
+            <div class="row">
+                <div class="col">
+                    
+                    <div class="card select Ryu" data-name="ryu">
+                        <img class="card-img-top" src="./assets/images/characters/ryu.png" alt="Card image cap">
+                        <h5 class="card-title ryu">Ryu</h5>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    
+                    <div class="card select Ken" data-name="ken">
+                        <img class="card-img-top" src="./assets/images/characters/ken.png" alt="Card image cap">
+                        <h5 class="card-title ken">Ken</h5>
+                    </div>
+
+                </div>
+                <div class="col">
+                    
+                    <div class="card select Chun" data-name="chun">
+                        <img class="card-img-top" src="./assets/images/characters/chun.png" alt="Card image cap">
+                        <h5 class="card-title chun">Chun-Li</h5>
+                    </div>
+
+                </div>
+                <div class="col">
+                    
+                    <div class="card select Cammy" data-name="cammy">
+                        <img class="card-img-top" src="./assets/images/characters/cammy.png" alt="Card image cap">
+                        <h5 class="card-title cam">Cammy</h5>
+                    </div>
+                    
+                </div>
+                <div class="col">
+                    
+                    <div class="card select Bison" data-name="bison">
+                        <img class="card-img-top" src="./assets/images/characters/bison.png" alt="Card image cap">
+                        <h5 class="card-title bison">M. Bison</h5>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="row mt-5">
+
+                <div class="col ">
+                    <div>
+                        <div id="player"></div>
+                        <div id="player-health"></div>
+                    </div>
+                </div>
+
+                <button id="fight" type="button" class="btn btn-danger" disabled>FIGHT!</button>
+                
+                <div class="col ">
+                    <div> 
+                        <div id="opponent"></div>
+                        <div id="opponent-health"></div>
+                    </div>
+                </div>
+
+                <div class="col-6 ">
+                    <div>
+                        <div id="enemies">
+                            <div class="row">
+                                <div class="col column0"></div>
+                                <div class="col column1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col column2"></div>
+                                <div class="col column3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary new-background">New Background</button>
+        <button type="button" class="btn btn-primary reset">Reset</button>
+
+        <script>
+        
+        $(document).ready(function(){
+            newBackground();
+            $(".new-background").on("click", newBackground);
+
+            $(".select").on("click", pickCharacter);
+            $("#fight").on("click", fight);
+            $(".reset").on("click", function(){
+                location.reload();
+            })
+        });
+        
+        </script>
+    </body>
+</html>

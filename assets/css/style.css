@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@font-face {
+font-family: Street Fighter;
+src: url(../fonts/SSF4\ ABUKET.ttf);
+}
+
+body{
+    background-color: black;
+    background-size: auto 100vh;
+    background-position: top;
+    padding: 30px;
+}
+
+.new-background{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+
+.col{
+    position: relative;
+}
+
+.card{
+    background: linear-gradient(transparent, white);
+    border: 0px;
+    float: left;
+    width: auto;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-img-top{
+    border-bottom: 3px;
+    border-bottom-style: double;
+    border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+.card-title{
+    padding: 0px;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    line-height: 1.6;
+    font-family: Street Fighter, sans-serif;
+    color: white;
+    
+    position: absolute;
+    top: 85%;
+
+    -webkit-text-stroke: 2px red;
+    text-shadow: -5px 5px 5px black;
+}
+
+.ryu{
+    font-size: 40px;
+    left: 12%;
+}
+
+.ken{
+    font-size: 43px;
+    left: 12%;
+}
+
+.chun{
+    font-size: 38px;
+    left: 12%;
+}
+
+.cam{
+    font-size: 40px;
+    left: 12%;
+}
+
+.bison{
+    font-size: 38px;
+    left: 12%;
+}
+
+.center{
+    margin: auto;
+}
+
+#fight{
+    padding: 100px 0px;
+}
+
+#player-health{
+    position: absolute;
+    bottom: 15px;
+    left: 25%;
+    color: white;
+
+    font-family: Fira Mono, monospace;
+    font-size: 75px;
+    font-weight: bold;
+
+}
+
+#opponent-health{
+    position: absolute;
+    bottom: 15px;
+    left: 25%;
+    color: white;
+
+    font-family: Fira Mono, monospace;
+    font-size: 75px;
+    font-weight: bold;
+
+}
