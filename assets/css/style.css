@@ -41,43 +41,43 @@ body{
 .card-title{
     padding: 0px;
     text-align: center;
-    height: 100px;
-    width: 200px;
-    font-size: 30px;
-    line-height: 1.6;
     font-family: Street Fighter, sans-serif;
     color: white;
     
     position: absolute;
-    top: 85%;
+    top: 90%;
 
     -webkit-text-stroke: 2px red;
     text-shadow: -5px 5px 5px black;
 }
 
 .ryu{
-    font-size: 40px;
-    left: 12%;
+    font-size: 3vw;
+    top: 85%;
+    left: 27%;
 }
 
 .ken{
-    font-size: 43px;
-    left: 12%;
+    font-size: 3.8vw;
+    top: 85%;
+    left: 27%;
 }
 
 .chun{
-    font-size: 38px;
+    font-size: 2.75vw;
+    white-space: nowrap;
     left: 12%;
 }
 
 .cam{
-    font-size: 40px;
-    left: 12%;
+    font-size: 3vw;
+    left: 15%;
 }
 
 .bison{
-    font-size: 38px;
-    left: 12%;
+    font-size: 2.75vw;
+    white-space: nowrap;
+    left: 10%;
 }
 
 .center{
@@ -95,7 +95,7 @@ body{
     color: white;
 
     font-family: Fira Mono, monospace;
-    font-size: 75px;
+    font-size: 8vw;
     font-weight: bold;
 
 }
@@ -107,7 +107,13 @@ body{
     color: white;
 
     font-family: Fira Mono, monospace;
-    font-size: 75px;
+    font-size: 8vw;
     font-weight: bold;
 
+}
+
+@media screen and (max-width: 960px){
+        .card-title{
+        -webkit-text-stroke: 1px red;
+    }
 }
